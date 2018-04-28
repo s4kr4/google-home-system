@@ -5,6 +5,9 @@
   "license": "MIT",
   "dependencies": {
     "axios": "^0.18.0",
+    "csv-parse": "^2.2.0",
+    "dotenv": "^5.0.1",
+    "google-home-notifier": "^1.2.0",
     "koa": "^2.5.0",
     "koa-json": "^2.0.2",
     "koa-react-view": "^3.0.0",

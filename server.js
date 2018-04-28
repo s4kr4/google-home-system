@@ -3,18 +3,20 @@ import Router from 'koa-router'
 import serve from 'koa-static'
 import json from 'koa-json'
 
-import apiRouter from './src/server/api/example'
+import temperature from './src/server/api/temperature'
+import slack from './src/server/api/slack'
 
 const port = process.env.PORT || 3000
 
 const app = new Koa()
 const router = new Router()
 
-router.use('/api', apiRouter.routes())
+router.use('/api/temperature', temperature.routes())
+router.use('/api/slack', slack.routes())
 
 app
   .use(router.routes())
   .use(router.allowedMethods())
   .use(json())
-  .use(serve(__dirname + '/app/dist'))
+  .use(serve(__dirname + '/www'))
   .listen(port)
