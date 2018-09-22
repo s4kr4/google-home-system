@@ -11,15 +11,11 @@ Client Side
 
 ## Get started
 
-1. `clone https://github.com/s4kr4/koa-react-boilerplate`
-
-1. `cd koa-react-boilerplate`
-
-1. `rm -rf .git`
-
-1. `git init && git add --all && git commit -m "Initial commit"`
+1. `clone https://github.com/s4kr4/google-home-system`
 
 1. `yarn` or `npm i`
+
+1. `patch -p1 < diff.patch`
 
 1. `yarn start` to start Server
 
