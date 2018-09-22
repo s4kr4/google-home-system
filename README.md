@@ -1,13 +1,4 @@
-# koa-react-boilerplate
-
-Boilerplate for Server-Client WebApp
-
-Server Side
-- [Koa](http://koajs.com/)
-
-Client Side
-- [React](https://reactjs.org/)
-
+# google-home-system
 
 ## Get started
 
