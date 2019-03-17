@@ -1,14 +1,11 @@
 import Router from 'koa-router'
-import googlehome from 'google-home-notifier'
 import axios from 'axios'
 import dotenv from 'dotenv'
 
 import file from '../helper/file'
+import notifier from '../helper/notifier'
 
 dotenv.config()
-
-const language = 'ja'
-googlehome.device('Home', language)
 
 const router = new Router()
 
@@ -20,9 +17,7 @@ router.get('/', async (ctx, next) => {
   const hour = date.getHours()
   const message = `${hour}時です。現在の室温は${temperature}度です。`
 
-  googlehome.notify(message, res => {
-    console.log(res)
-  })
+  await notifier.say(message)
 
   await axios.post(process.env.WEBHOOK_URI, {
     text: message
